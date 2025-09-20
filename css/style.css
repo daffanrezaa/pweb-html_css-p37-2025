@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;800;900&display=swap');
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+  section {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+  }
+  
+  #sectiondaffan {
+    background: #33699A;
+  }
+  
+  #sectionasyaa {
+    background: #FEF5AA;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .experience {
+    color: #33699A;
+    font-size: clamp(24px, calc((90 / 1440) * 100vw), 90px);
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    position: absolute;
+    left: calc((83 / 1440) * 100vw);
+    top: calc((90 / 1024) * 100vh);
+  }
+  
+  .experience .dot {
+    color: #59A0C8;
+  }
+
+  .line svg{
+    position: absolute;
+    left: calc((122 / 1440) * 100vw);
+    top: calc((239 / 1024) * 100vh);
+  }
+
+  .listexp {
+    position: absolute;
+    left: calc((153 / 1440) * 100vw);
+    top: calc((251 / 1024) * 100vh);
+  
+    display: flex;
+    flex-direction: column;
+    gap: calc((30 / 1024) * 100vh);
+    color: #59A0C8;
+    font-family: Raleway;
+  }
+  
+  .listexp a {
+    font-weight: 800;
+    font-size: clamp(18px, calc((30 / 1440) * 100vw), 30px);
+    color: #59A0C8;
+    text-decoration: none;
+  }
+
+  .listexp .khusus_osis{
+    font-weight: 900;
+    color: #33699A;
+  }
+  
