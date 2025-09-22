@@ -11,7 +11,6 @@
     padding: 0;
   }
   
-  
   section {
     height: 100vh;
     width: 100vw;
@@ -46,10 +45,25 @@
     color: #59A0C8;
   }
 
-  .line svg{
+  .line svg {
     position: absolute;
     left: calc((122 / 1440) * 100vw);
     top: calc((239 / 1024) * 100vh);
+  }
+
+  .line svg.line-top {
+    position: absolute;
+    top: 230px;
+  }
+
+  .line svg.line-med {
+    position: absolute;
+    top: 285px;
+  }
+
+  .line svg.line-bot {
+    position: absolute;
+    top: 335px;
   }
 
   .listexp {
@@ -59,20 +73,144 @@
   
     display: flex;
     flex-direction: column;
-    gap: calc((30 / 1024) * 100vh);
+    gap: calc((40 / 1024) * 100vh);
     color: #59A0C8;
     font-family: Raleway;
   }
   
   .listexp a {
     font-weight: 800;
-    font-size: clamp(18px, calc((30 / 1440) * 100vw), 30px);
+    font-size: clamp(18px, calc((25 / 1440) * 100vw), 25px);
     color: #59A0C8;
     text-decoration: none;
   }
 
-  .listexp .khusus_osis{
-    font-weight: 900;
+  .listexp .khusus_pencet{
+    font-weight: 800;
+    font-size: clamp(18px, calc((25 / 1440) * 100vw), 25px);
+    text-decoration: none;
     color: #33699A;
   }
+
+  .listexp .listdown{
+    white-space: nowrap;
+    font-weight: 800;
+    font-size: clamp(18px, calc((25 / 1440) * 100vw), 25px);
+    text-decoration: none;
+    color: #33699A;
+    position: absolute;
+    left: calc((600 / 1440) * 100vw);
+  }
   
+  .wave {
+    color: #59A0C8;
+    position: absolute;
+    left: calc((0 / 1440) * 100vw);
+    top: calc((759 / 1024) * 100vh);
+    width: auto;
+    height: 266px;
+    transform: scaleX(1.2); /*digedein dikit */
+    transform-origin: left;
+  }
+
+  .photo-row {
+    position: absolute;
+    left: calc((10 / 1440) * 100vw);
+    bottom: calc((50 / 1024) * 100vh);
+    display: flex;
+    gap: 80px;          /* jarak antar foto */
+    align-items: flex-start; /* biar bisa berbeda tinggi */
+  }
+
+  .photo {
+    width: 226px;
+    height: 295px;
+    border-radius: 90px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.18);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .photo-row .photo:nth-child(1) {
+    transform: translateY(0px);
+  }
+  
+  .photo-row .photo:nth-child(2) {
+    transform: translateY(20px);
+  }
+  
+  .photo-row .photo:nth-child(3) {
+    transform: translateY(-10px);
+  }
+  
+  .photo-row .photo:nth-child(4) {
+    transform: translateY(15px);
+  }
+  
+  .photo-row .photo:nth-child(5) {
+    transform: translateY(15px);
+  }
+  
+  .stars-illu1 {
+    position: absolute;
+    left: calc((0 / 1440) * 100vw);
+    bottom: calc((250 / 1024) * 100vh);
+    width: 150px;
+    height: auto;
+  }
+
+  .stars-illu2 {
+    position: absolute;
+    left: calc((1300 / 1440) * 100vw);
+    bottom: calc((0 / 1024) * 100vh);
+    width: 150px;
+    height: auto;
+  }
+
+  .thin-text{
+    white-space: nowrap;
+    font-size: clamp(20px, calc((20 / 1440) * 100vw), 20px);
+    text-decoration: none;
+    position: absolute;
+    color: #59A0C8;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: absolute;
+    top: calc((290 / 1024) * 100vh);
+    left: calc((753 / 1440) * 100vw);
+  }
+
+  .thin-text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* jarak antar baris */
+    font-family: Raleway, sans-serif;
+  }
+  
+  .thin-text-date {
+    color: #33699A;
+    font-weight: 600;
+    font-size: clamp(20px, calc((20 / 1440) * 100vw), 20px);
+  }
+  
+  .thin-text-role {
+    color: #33699A;
+    font-weight: 600;
+    font-size: clamp(20px, calc((20 / 1440) * 100vw), 20px);
+  }
+  
+  .thin-text-desc {
+    color: #33699A;
+    font-weight: 400;
+    font-size: clamp(16px, calc((16 / 1440) * 100vw), 16px);
+    margin-left: 20px;
+    max-width: calc(100% - 20px);
+    white-space: normal;
+    text-align: left;
+    display: block;
+    word-break: break-word;
+  }
