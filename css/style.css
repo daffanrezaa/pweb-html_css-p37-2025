@@ -18,11 +18,71 @@ body {
   color: #333;
 }
 
+@media (max-width: 768px) {
+  .about-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .aboutme h1 {
+    font-size: 24px;
+  }
+
+  #sectiondaffan .container {
+    padding: 30px 20px;
+  }
+
+  .experience {
+    margin-left: 20px;
+  }
+
+  .photo-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .photo-row .photo {
+    transform: translateY();
+  }
+
+  .stars-illu1, .stars-illu2 {
+    display: none;  
+  }
+
+  #sectiondaffan {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  #sectiondaffan .education h1 {
+    font-size: 24px;
+  }
+
+  .aboutme p {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .listedu a {
+    font-size: 18px;
+    margin-left: 10px;
+  }
+
+  .linedaffan {
+    left: 15px;
+    top: 55px;
+  }
+
+}
 /* ====== DAFFAN ====== */
 #sectiondaffan {
   padding: 100px 0;
   background: #33699A;
   color: #fff;
+  position: relative; /* untuk dekorasi absolute */
 }
 
 #sectiondaffan .container {
@@ -32,7 +92,7 @@ body {
   flex-direction: column;
   gap: 40px;
   background: #18466F;
-  padding: 40px;
+  padding: 52px;
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
 }
@@ -60,27 +120,33 @@ body {
   position: relative; 
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 18px;
 }
 
 .linedaffan {
   position: absolute;
   left: 25px; 
-  top: 80px;
+  top: 65px;
 }
 
 .listedu {
-  margin-left: 60px;
+  margin-left: 55px;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 30px;
+}
+
+.listedu a:hover {
+  transform: translateX(10px);
+  color: #FEF5AA;
 }
 
 .listedu a {
-  font-weight: 800;
+  font-weight: 750;
   font-size: clamp(18px, calc((25 / 1440) * 100vw), 25px);
   color: #59a0c8;
   text-decoration: none;
+  transition: transform 0.2s ease, color 0.2s ease;
 }
 
 /* ====== ASYA ====== */
@@ -88,6 +154,7 @@ body {
   background: #FEF5AA;
   padding: 70px 0;  /* penting: biar ada jarak dan tinggi section */
   position: relative; /* untuk dekorasi absolute */
+  overflow-x: hidden;
 }
 
 .experience {
