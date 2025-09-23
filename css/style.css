@@ -86,7 +86,7 @@ body {
 /* ====== ASYA ====== */
 #sectionasyaa {
   background: #FEF5AA;
-  padding: 100px 0;  /* penting: biar ada jarak dan tinggi section */
+  padding: 70px 0;  /* penting: biar ada jarak dan tinggi section */
   position: relative; /* untuk dekorasi absolute */
 }
 
@@ -109,38 +109,94 @@ body {
   display: block;
 }
 
+.line svg.line-top {
+  margin-bottom: 1000px;
+}
+
+.line svg.line-med {
+  position: absolute;
+  top: 365px;
+}
+
+.line svg.line-bot {
+  margin-bottom: 150px;
+}
+
 .listexp {
   margin-left: 150px;
-  margin-bottom: 80px;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 20px;
   color: #59A0C8;
   font-family: Raleway, sans-serif;
+  transform: translateY(-245px);
 }
 
 .listexp a {
   font-weight: 800;
   font-size: clamp(18px, calc((25 / 1440) * 100vw), 25px);
+  bottom: 800px;
   color: #59A0C8;
   text-decoration: none;
+  z-index: 2; 
 }
 
-/* dekorasi tetap absolute */
-.wave {
+listexp .khusus_pencet{
+  font-weight: 800;
+  font-size: clamp(18px, calc((25 / 1440) * 100vw), 25px);
+  text-decoration: none;
+  color: #33699A;
+  pointer-events: none;
+}
+
+.listexp .listdown{
+  white-space: nowrap;
+  font-weight: 800;
+  font-size: clamp(18px, calc((25 / 1440) * 100vw), 25px);
+  text-decoration: none;
+  color: #33699A;
   position: absolute;
+  left: calc((600 / 1440) * 100vw);
+  pointer-events: none;
+  top: auto;
+}
+
+.wave {
+  position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
-  transform: scaleX(1.2);
+  transform: scaleX(1.1);
+}
+
+.photo-row {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  padding-bottom: 0px;
+}
+
+.wave-container {
+  position: relative;
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;   /* nempel di bawah container */
+  left: 0;
+  width: 100%;
+  transform: scaleX(1.3);
   transform-origin: left;
 }
 
 .photo-row {
-  margin-top: 60px;
   display: flex;
   justify-content: center;
   gap: 80px;
+  position: absolute; /* bikin nempel ke wave */
+  bottom: 0;          /* nempel di ujung atas wave */
+  width: 100%;
+  transform: translateY(-10%); /* sesuaikan agar foto “menempel” */
 }
 
 .photo {
@@ -156,19 +212,63 @@ body {
 
 .photo-row .photo:nth-child(2) { transform: translateY(20px); }
 .photo-row .photo:nth-child(3) { transform: translateY(-10px); }
-.photo-row .photo:nth-child(4) { transform: translateY(15px); }
-.photo-row .photo:nth-child(5) { transform: translateY(15px); }
+.photo-row .photo:nth-child(4) { transform: translateY(-15px); }
+.photo-row .photo:nth-child(5) { transform: translateY(-15px); }
 
 .stars-illu1 {
   position: absolute;
   left: 0;
-  bottom: 250px;
-  width: 150px;
+  bottom: 150px;
+  width: 190px;
 }
 
 .stars-illu2 {
   position: absolute;
-  right: 20px;
+  right: 0px;
   bottom: 0;
   width: 150px;
+}
+
+.thin-text{
+  white-space: nowrap;
+  font-size: clamp(20px, calc((20 / 1440) * 100vw), 20px);
+  text-decoration: none;
+  position: relative;
+  color: #59A0C8;
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  top: -410px;
+}
+
+.thin-text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* jarak antar baris */
+  font-family: Raleway, sans-serif;
+}
+
+.thin-text-date {
+  color: #33699A;
+  font-weight: 600;
+  margin-left: 770px;
+}
+
+.thin-text-role {
+  color: #33699A;
+  font-weight: 600;
+  margin-left: 770px;
+}
+
+.thin-text-desc {
+  color: #33699A;
+  font-weight: 400;
+  font-size: clamp(16px, calc((16 / 1440) * 100vw), 16px);
+  margin-left: 770px;
+  max-width: calc(100% - 20px);
+  white-space: normal;
+  text-align: left;
+  display: block;
+  word-break: break-word;
 }
