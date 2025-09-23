@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amarante&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
   * {
     margin: 0;
@@ -6,28 +8,109 @@
     box-sizing: border-box;
   }
 
-  body {
-    margin: 0;
-    padding: 0;
+  html {
+    scroll-behavior: smooth;
   }
-  
-  section {
-    height: 100vh;
-    width: 100vw;
-    display: flex;
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: #333;
   }
   
   #sectiondaffan {
+    padding: 100px 0;
     background: #33699A;
+    color: #fff;
   }
-  
+
+  #sectiondaffan .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    background: #18466F;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+  }
+
+  #sectiondaffan .aboutme h1 {
+    margin-bottom: 15px;
+    font-weight: 800;
+    font-family: 'Raleway', sans-serif;
+    font-size: 40px;
+  }  
+
+  #sectiondaffan .aboutme p {
+    font-size: 16px;
+    line-height: 1.6;
+    font-family: 'Montserrat', sans-serif;
+    text-align: justify;
+  }
+
+  #sectiondaffan .education h1 {
+    margin-bottom: 10px;
+    font-weight: 800;
+    font-family: 'Raleway', sans-serif;
+    font-size: 32px;
+  }
+
+  .education {
+    color: #ffffff;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
+    position: relative; 
+    display: flex;
+    padding: 40px 0;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+
+  .education .dot {
+    color: #ffffff;
+  }
+
+  .linedaffan {
+    position: absolute;
+    left: 25px; 
+    top: 80px;
+    height: calc(100% - 600px);
+    margin-top: 30px;
+  }
+  .listedu {
+    margin-left: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    font-family: 'Raleway', sans-serif; 
+  }
+
+  .listedu a {
+    margin-top: 15px;
+    font-weight: 800;
+    font-family: 'Raleway', sans-serif;
+    font-size: clamp(18px, calc((25 / 1440) * 100vw), 25px);
+    color: #59a0c8;
+    text-decoration: none;
+    gap: calc((30 / 1024) * 100vh);
+    
+  }
+
+  .info-card {
+    background-color: #18466F;
+    color: #FFFFFF;
+    border-radius: 10px;
+    padding: 30px;
+    margin-top: 30px;
+  }
+
   #sectionasyaa {
     background: #FEF5AA;
   }
   
-  html {
-    scroll-behavior: smooth;
-  }
 
   .experience {
     color: #33699A;
@@ -214,3 +297,13 @@
     display: block;
     word-break: break-word;
   }
+
+   .info-card {
+    grid-column: 1 / 2; 
+    grid-row: 1 / 3; 
+
+    background-color: #18466F;
+    color: #FFFFFF;
+    border-radius: 10px;
+    padding: 30px;
+}
