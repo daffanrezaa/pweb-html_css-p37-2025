@@ -30,6 +30,7 @@ body {
 
   #sectiondaffan .container {
     padding: 30px 20px;
+    width: 100%;
   }
 
   .experience {
@@ -51,10 +52,10 @@ body {
   }
 
   #sectiondaffan {
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding: 60px 20px;
+    justify-content: center;
+    min-height: auto;
+    display: block;
   }
 
   #sectiondaffan .education h1 {
@@ -62,7 +63,7 @@ body {
   }
 
   .aboutme p {
-    font-size: 15px;
+    font-size: 13px;
     text-align: center;
   }
 
@@ -76,13 +77,34 @@ body {
     top: 55px;
   }
 
+  .education-content {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 40px;
+  }
+
+  .edudetail {
+    padding-top: 0;
+    text-align: right;
+    margin-left: 0;
+    padding-left: 0;
+    margin-top: 28px ;
+  }
+
 }
 /* ====== DAFFAN ====== */
 #sectiondaffan {
-  padding: 100px 0;
+  padding: 40px 25px;
   background: #33699A;
   color: #fff;
-  position: relative; /* untuk dekorasi absolute */
+  position: relative; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  gap: 40px;
+
 }
 
 #sectiondaffan .container {
@@ -92,7 +114,7 @@ body {
   flex-direction: column;
   gap: 40px;
   background: #18466F;
-  padding: 52px;
+  padding: 60px;
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
 }
@@ -121,19 +143,36 @@ body {
   display: flex;
   flex-direction: column;
   gap: 18px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.education-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 50px;
+  margin-top: 10px;
+}
+
+.education-nav {
+  position: relative;
+  flex-shrink: 0;
 }
 
 .linedaffan {
   position: absolute;
-  left: 25px; 
-  top: 65px;
+  left: 10px;
+  top: 0px; 
+  height: 100%;
+  margin-bottom: 40px;
 }
 
 .listedu {
-  margin-left: 55px;
+  margin-left: 40px;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
+  position: relative;
 }
 
 .listedu a:hover {
@@ -148,6 +187,14 @@ body {
   text-decoration: none;
   transition: transform 0.2s ease, color 0.2s ease;
 }
+
+.edudetail {
+  padding-top: 5px;
+  margin-left: 50px;
+  font-size: 15px;
+}
+
+
 
 /* ====== ASYA ====== */
 #sectionasyaa {
@@ -238,4 +285,29 @@ body {
   right: 20px;
   bottom: 0;
   width: 150px;
+}
+
+.back-link {
+  text-align: center;
+  margin-top: auto;
+  align-self: center;
+  padding-top: 20px;
+}
+
+.back-link a {
+  display: inline-block;
+  background-color: #FEF5AA;
+  color: #59a0c8;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 750;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+}
+
+.back-link a:hover {
+  background-color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
